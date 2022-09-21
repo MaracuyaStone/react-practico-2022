@@ -2,10 +2,12 @@ import { useState, useEffect } from "react"
 
 function App() {
 
+  const API_URL = import.meta.env.VITE_API_URL
+
   const [criptos, setCriptos] = useState()
 
   useEffect(() => {
-    fetch("https://api.coincap.io/v2/assets")
+    fetch(`${API_URL}assets`)
       .then((resp) => resp.json())
       .then((data) => {
         setCriptos(data.data)
@@ -21,16 +23,10 @@ function App() {
     <>
       <h1>Lista de criptomonedas</h1>
       <ol>
-        { criptos.map(cripto => (
+        { criptos.map(( { id, name, priceUsd, changePercent24Hr } ) => (
           <>
-            <li>
-              <p>
-                
-                  Nombre: ${cripto.name} 
-                  Precio $USD: ${cripto.priceUsd} 
-                  % variation: ${cripto.changePercent24Hr}
-                
-              </p>
+            <li key={id}>
+              Nombre: {name} Precio: {priceUsd} Variación%: {changePercent24Hr}
             </li>
           </>
           
