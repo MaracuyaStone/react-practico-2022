@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+
+
+.h1 {
+    color: rgb(226, 226, 226);
+    text-align: center;
+}
+
+.gridContainer {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   
+    
+
+}
+
+.CriptoDiv:hover {
+    border: 2px solid white;
+}
+

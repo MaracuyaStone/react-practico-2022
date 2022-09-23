@@ -1,0 +1,28 @@
+.criptoImg {
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.CriptoDiv {
+    background:rgb(200, 200, 200);
+    padding: 1.3em;
+
+    color:rgb(0, 0, 0);
+
+    font-family: 'Verdana', Times, Sans-serif;
+    font-size: small;
+    
+    text-align: justify;
+    line-height: 1.3em;
+}
+
+.criptoText {
+    text-align: justify;
+    text-justify:distribute-all-lines;
+}
